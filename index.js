@@ -2,6 +2,7 @@ module.exports = function NoMoreAnnoyingTitles(mod) {
 	const achieves = {
 		99115: true,
 		99116: true,
+		99117: true,
 		99111: true,
 		99112: true,
 		99113: true,
