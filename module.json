@@ -1,5 +1,11 @@
 {
     "disableAutoUpdate": false,
+    "name": "no-more-annoying-titles",
+	"author": "SaltyMonkey",
+	"description": "Removing shiny titles from another players",
+	"options": {
+		"niceName": "NoMoreTitles"
+	},
     "servers": ["https://raw.githubusercontent.com/SaltyMonkey/NoMoreAnnoyingTitles/master/"],
     "supportUrl": "https://github.com/SaltyMonkey/NoMoreAnnoyingTitles/issues"
 }
