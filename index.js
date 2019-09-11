@@ -24,5 +24,5 @@ module.exports = function NoMoreAnnoyingTitles(mod) {
 		}
 	}
 	mod.hook("S_SPAWN_USER", 15, removeTitle);
-	mod.hook("S_UNICAST_TRANSFORM_DATA", 3, removeTitle);
+	mod.hook("S_UNICAST_TRANSFORM_DATA", 6, removeTitle);
 }
