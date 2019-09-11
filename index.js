@@ -18,7 +18,8 @@ module.exports = function NoMoreAnnoyingTitles(mod) {
 	};
 	
 	function removeTitle(event) {
-		if(achieves[event.title]) {
+		const packTitle = Number(event.title);
+		if(achieves[packTitle]) {
 			event.title = 0;
 			return true;
 		}
