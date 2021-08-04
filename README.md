@@ -1,2 +1,3 @@
 # NoMoreAnnoyingTitles
-Stop retardation and gib my fps
+
+Removing shiny titles from another players
