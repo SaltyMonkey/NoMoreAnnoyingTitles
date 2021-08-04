@@ -2,12 +2,16 @@ class NoMoreAnnoyingTitlesClient {
 	constructor(mod) {
 		this.achieves = {};
 		mod.clientInterface.once("ready", async () => {
-			mod.queryData("/AchievementList/Achievement@grade=?/", [effect.attributes.grade], true).then(achievements => {
-				achievements.forEach(achievement => {
-					const rewardList = achievement.children.find(x => x.name === "RewardList");
-					if(rewardList && rewardList.children.find(x => x.name === "TitleReward"))
-						achieves[achievement.attributes.id] = true;
+			mod.queryData("/NamePlate/Resource/UserName/SpecificEffect/Effect/", [], true, false, ["grade"]).then(effects => {
+				effects.forEach(effect => {
+					mod.queryData("/AchievementList/Achievement@grade=?/", [effect.attributes.grade], true).then(achievements => {
+						achievements.forEach(achievement => {
+							const rewardList = achievement.children.find(x => x.name === "RewardList");
+							if(rewardList && rewardList.children.find(x => x.name === "TitleReward"))
+								this.achieves[achievement.attributes.id] = true;
+						});
 					});
+				});
 			});
 		});
 	}
