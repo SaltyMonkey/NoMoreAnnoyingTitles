@@ -17,7 +17,7 @@ class NoMoreAnnoyingTitlesClient {
 	}
 }
 
-module.exports = function NoMoreAnnoyingTitles(mod) {
+function NoMoreAnnoyingTitles(mod) {
 	const removeTitle = (event) => {
 		if(mod.clientMod.achieves[event.title]) {
 			event.title = 0;
